@@ -1,0 +1,9 @@
+<table class="table table-sm">
+    <tr *ngFor = "let tarjeta of tarjetas; trackBy: trackByFn">
+        <td>{{ tarjeta.titular }}</td>
+        <td>{{ tarjeta.numeroTarjeta }}</td>
+        <td>{{ tarjeta.fechaExpiracion }}</td>
+        <td><i class="fas fa-edit fa-lg text-info" (click)="editarTarjeta(tarjeta)" style="cursor: pointer;"></i></td>
+        <td><i class="fas fa-trash-alt fa-lg text-danger" (click)="eliminarTarjeta(tarjeta.id)" style="cursor: pointer;"></i></td>
+    </tr>
+</table>
